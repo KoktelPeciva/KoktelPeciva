@@ -1,1133 +1,783 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KOKTEL PECIVA | Mini kiflice</title>
+  <title>KOKTEL PECIVA | Slane i slatke kiflice</title>
 
-<meta name="description"
-content="KOKTEL PECIVA - domaće mini kiflice sa kulenom, čajnom, suvim vratom, sirom, kremom i pizza nadevom. Lično preuzimanje ili dostava na kućnu adresu.">
+  <meta name="description" content="KOKTEL PECIVA - domaće koktel kiflice sa kulenom, čajnom, suvim vratom, sirom, kremom i pizza nadevom. Cena 900 din/kg. Lično preuzimanje i dostava.">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#fffaf4;
-    color:#30231a;
-}
-
-/* HEADER */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(255,250,244,.96);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid #eadbc9;
-}
-
-.nav{
-    max-width:1150px;
-    margin:auto;
-    padding:16px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:23px;
-    font-weight:900;
-    color:#a84f18;
-}
-
-nav a{
-    color:#34261d;
-    text-decoration:none;
-    margin-left:25px;
-    font-weight:700;
-}
-
-nav a:hover{
-    color:#a84f18;
-}
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    padding:120px 20px 70px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-
-    background:
-    linear-gradient(
-        rgba(255,248,237,.60),
-        rgba(255,248,237,.88)
-    ),
-    url("https://remiketering.rs/assets/gallery-1-RiFgRM-5.jpg");
-
-    background-size:cover;
-    background-position:center;
-}
-
-.hero-content{
-    max-width:850px;
-}
-
-.badge{
-    display:inline-block;
-    background:#a84f18;
-    color:white;
-    padding:10px 20px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:800;
-    letter-spacing:1px;
-    margin-bottom:22px;
-}
-
-.hero h1{
-    font-size:clamp(55px,10vw,105px);
-    line-height:.88;
-    color:#71320d;
-    font-weight:900;
-    margin-bottom:25px;
-}
-
-.hero h1 span{
-    color:#b85d1c;
-}
-
-.hero p{
-    max-width:680px;
-    margin:auto;
-    font-size:20px;
-    line-height:1.6;
-}
-
-.buttons{
-    margin-top:32px;
-}
-
-.btn{
-    display:inline-block;
-    padding:16px 28px;
-    background:#a84f18;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:900;
-    border:none;
-    cursor:pointer;
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(120,55,15,.20);
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-    background:#7d350c;
-}
-
-.btn-light{
-    background:white;
-    color:#873d11;
-    margin-left:10px;
-}
-
-/* SECTIONS */
-
-section{
-    padding:90px 20px;
-}
-
-.container{
-    max-width:1150px;
-    margin:auto;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.title h2{
-    color:#71320d;
-    font-size:42px;
-    margin-bottom:12px;
-}
-
-.title p{
-    color:#786b5d;
-    font-size:18px;
-}
-
-/* PRODUCTS */
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.product{
-    background:white;
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 8px 30px rgba(65,38,16,.10);
-    transition:.3s;
-}
-
-.product:hover{
-    transform:translateY(-8px);
-}
-
-.product img{
-    width:100%;
-    height:230px;
-    object-fit:cover;
-    display:block;
-}
-
-.product-info{
-    padding:22px;
-}
-
-.product-info h3{
-    color:#71320d;
-    font-size:21px;
-    margin-bottom:10px;
-}
-
-.product-info p{
-    color:#75685b;
-    line-height:1.55;
-}
-
-.price{
-    margin-top:16px;
-    color:#a84f18;
-    font-size:18px;
-    font-weight:900;
-}
-
-/* ABOUT */
-
-.about{
-    background:#f3e4d0;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:55px;
-    align-items:center;
-}
-
-.about-image img{
-    width:100%;
-    border-radius:28px;
-    display:block;
-    box-shadow:0 15px 45px rgba(61,34,14,.18);
-}
-
-.about-text h2{
-    color:#71320d;
-    font-size:43px;
-    margin-bottom:20px;
-}
-
-.about-text p{
-    color:#625549;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.points{
-    margin-top:25px;
-    display:grid;
-    gap:12px;
-}
-
-.point{
-    background:white;
-    border-radius:14px;
-    padding:16px 18px;
-    font-weight:700;
-}
-
-/* DELIVERY */
-
-.delivery{
-    background:#fff;
-}
-
-.delivery-boxes{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.delivery-box{
-    background:#fffaf3;
-    border:1px solid #eadbc9;
-    border-radius:22px;
-    padding:35px;
-    text-align:center;
-    box-shadow:0 8px 30px rgba(65,38,16,.07);
-}
-
-.delivery-icon{
-    font-size:45px;
-    margin-bottom:15px;
-}
-
-.delivery-box h3{
-    color:#71320d;
-    font-size:25px;
-    margin-bottom:12px;
-}
-
-.delivery-box p{
-    color:#75685b;
-    line-height:1.6;
-}
-
-/* ORDER */
-
-.order{
-    background:#fff;
-}
-
-.order-box{
-    max-width:720px;
-    margin:auto;
-    background:#fffaf3;
-    border:1px solid #eadbc9;
-    padding:35px;
-    border-radius:25px;
-    box-shadow:0 12px 40px rgba(65,38,16,.08);
-}
-
-form{
-    display:grid;
-    gap:14px;
-}
-
-label{
-    font-weight:700;
-    color:#5b493b;
-    margin-top:4px;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:15px;
-    border:1px solid #ddcbb6;
-    border-radius:12px;
-    background:white;
-    font-size:16px;
-    font-family:inherit;
-    outline:none;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-    border-color:#a84f18;
-}
-
-textarea{
-    min-height:110px;
-    resize:vertical;
-}
-
-#addressBox{
-    display:none;
-}
-
-.notice{
-    background:#f3e4d0;
-    padding:15px;
-    border-radius:12px;
-    color:#634a36;
-    font-size:14px;
-    line-height:1.5;
-}
-
-/* CONTACT */
-
-.contact{
-    background:#71320d;
-    color:white;
-    text-align:center;
-}
-
-.contact h2{
-    font-size:45px;
-    margin-bottom:15px;
-}
-
-.contact p{
-    font-size:18px;
-    opacity:.9;
-}
-
-.phone{
-    display:block;
-    color:white;
-    text-decoration:none;
-    font-size:34px;
-    font-weight:900;
-    margin:25px 0;
-}
-
-.contact .btn{
-    background:white;
-    color:#71320d;
-}
-
-/* FOOTER */
-
-footer{
-    background:#421b08;
-    color:#eadbc9;
-    text-align:center;
-    padding:25px 15px;
-}
-
-/* FLOATING PHONE */
-
-.call{
-    position:fixed;
-    right:18px;
-    bottom:18px;
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    background:#a84f18;
-    color:white;
-    text-decoration:none;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:28px;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
-    z-index:1000;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-    nav{
-        display:none;
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .products{
-        grid-template-columns:repeat(2,1fr);
+    html {
+      scroll-behavior: smooth;
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf3;
+      color: #292929;
+      line-height: 1.6;
     }
 
-    .delivery-boxes{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:65px 15px;
-    }
-
-    .hero{
-        padding-top:120px;
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.2);
     }
 
-    .hero h1{
-        font-size:57px;
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .hero p{
-        font-size:17px;
+    .logo {
+      font-size: 23px;
+      font-weight: 900;
+      color: #ffb300;
     }
 
-    .buttons .btn{
-        display:block;
-        margin:10px 0;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: bold;
     }
 
-    .products{
-        grid-template-columns:1fr;
+    nav a:hover {
+      color: #ffb300;
     }
 
-    .product img{
-        height:240px;
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
+        url("https://remiketering.rs/assets/gallery-1-RiFgRM-5.jpg")
+        center/cover;
+      color: white;
     }
 
-    .title h2{
-        font-size:33px;
+    .hero-content {
+      max-width: 800px;
     }
 
-    .about-text h2{
-        font-size:34px;
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 15px;
+      color: #ffb300;
+      text-shadow: 2px 2px 5px #000;
     }
 
-    .order-box{
-        padding:22px;
+    .hero p {
+      font-size: 23px;
+      margin-bottom: 25px;
     }
 
-    .contact h2{
-        font-size:34px;
+    .price {
+      display: inline-block;
+      background: #ffb300;
+      color: #111;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 25px;
     }
 
-    .phone{
-        font-size:27px;
+    .btn {
+      display: inline-block;
+      background: #ffb300;
+      color: #111;
+      padding: 14px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
     }
-}
 
-</style>
+    .btn:hover {
+      transform: translateY(-2px);
+      background: #ffc533;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+
+    .section-title span {
+      color: #e69a00;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .card-price {
+      color: #e69a00;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .info {
+      background: #111;
+      color: white;
+      max-width: none;
+    }
+
+    .info-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .info-box {
+      background: #1d1d1d;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    .info-box .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .info-box h3 {
+      color: #ffb300;
+      margin-bottom: 8px;
+    }
+
+    .order {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      padding: 35px;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 9px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    #addressBox {
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #ffb300;
+      color: #111;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background: #ffc533;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .phone {
+      display: inline-block;
+      margin-top: 15px;
+      font-size: 30px;
+      font-weight: 900;
+      color: #111;
+      text-decoration: none;
+    }
+
+    .phone:hover {
+      color: #e69a00;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .floating-call {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #22a447;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      z-index: 2000;
+    }
+
+    @media (max-width: 800px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .products {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        display: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .order {
+        padding: 22px;
+      }
+
+      .section-title {
+        font-size: 29px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
+  <div class="nav">
+    <div class="logo">🥐 KOKTEL PECIVA</div>
 
-<div class="nav">
-
-<div class="logo">
-🥐 KOKTEL PECIVA
-</div>
-
-<nav>
-<a href="#ponuda">Ponuda</a>
-<a href="#onama">O nama</a>
-<a href="#dostava">Dostava</a>
-<a href="#poruci">Poruči</a>
-<a href="#kontakt">Kontakt</a>
-</nav>
-
-</div>
-
+    <nav>
+      <a href="#ponuda">Ponuda</a>
+      <a href="#porudzbina">Poruči</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
+  <div class="hero-content">
 
-<div class="hero-content">
+    <h1>KOKTEL PECIVA</h1>
 
-<div class="badge">
-DOMAĆE MINI KIFLICE
-</div>
+    <p>
+      Ukusne domaće mini kiflice za svaku priliku.
+    </p>
 
-<h1>
-KOKTEL<br>
-<span>PECIVA</span>
-</h1>
+    <div class="price">
+      900 din / KG
+    </div>
 
-<p>
-Male, sveže i ukusne kiflice za rođendane,
-slave, proslave, svadbe, firme i sve posebne prilike.
-</p>
+    <br>
 
-<div class="buttons">
+    <a href="#porudzbina" class="btn">
+      🥐 PORUČI ODMAH
+    </a>
 
-<a href="#poruci" class="btn">
-🥐 PORUČI KIFLICE
-</a>
+    <a href="tel:0628141211" class="btn">
+      📞 POZOVI
+    </a>
 
-<a href="tel:0628141211" class="btn btn-light">
-📞 062 814 1211
-</a>
-
-</div>
-
-</div>
-
+  </div>
 </section>
-
-
-<!-- PONUDA -->
 
 <section id="ponuda">
 
-<div class="container">
-
-<div class="title">
-
-<h2>Naša ponuda</h2>
-
-<p>
-Izaberite svoje omiljene mini kiflice
-</p>
-
-</div>
-
-
-<div class="products">
-
-
-<!-- KULEN -->
-
-<div class="product">
-
-<img
-src="https://cdn.navidiku.rs/firme/proizvodgalerija3/galerija107115/slani-zalogaji-ketering-kragujevac-97e81e-984b01f3-1-580x400.jpg"
-alt="Koktel pecivo">
-
-<div class="product-info">
-
-<h3>🌶️ Kiflice sa kulenom</h3>
-
-<p>
-Mini kiflice sa ukusnim i pikantnim kulenom.
-</p>
-
-<div class="price">
-Cena na upit
-</div>
-
-</div>
-
-</div>
-
-
-<!-- CAJNA -->
-
-<div class="product">
-
-<img
-src="https://remiketering.rs/assets/gallery-1-RiFgRM-5.jpg"
-alt="Mini kiflice">
-
-<div class="product-info">
-
-<h3>🥩 Kiflice sa čajnom</h3>
-
-<p>
-Mekane mini kiflice sa čajnom kobasicom.
-</p>
-
-<div class="price">
-Cena na upit
-</div>
-
-</div>
-
-</div>
-
-
-<!-- SUVI VRAT -->
-
-<div class="product">
-
-<img
-src="https://calgirona.com/wp-content/uploads/2022/11/IMG_6392-rotated.jpg"
-alt="Mini slano pecivo">
-
-<div class="product-info">
-
-<h3>🥩 Kiflice sa suvim vratom</h3>
-
-<p>
-Ukusne mini kiflice sa suvim vratom.
-</p>
-
-<div class="price">
-Cena na upit
-</div>
-
-</div>
-
-</div>
-
-
-<!-- SIR -->
-
-<div class="product">
-
-<img
-src="https://www.njuskalo.hr/image-xlsize/ostale-usluge/slane-slatke-plate-slika-126918971.jpg"
-alt="Kiflice sa sirom">
-
-<div class="product-info">
-
-<h3>🧀 Kiflice sa sirom</h3>
-
-<p>
-Mekane domaće kiflice punjene sirom.
-</p>
-
-<div class="price">
-Cena na upit
-</div>
-
-</div>
-
-</div>
-
-
-<!-- KREM -->
-
-<div class="product">
-
-<img
-src="https://remiketering.rs/assets/gallery-1-RiFgRM-5.jpg"
-alt="Mini pecivo">
-
-<div class="product-info">
-
-<h3>🍫 Kiflice sa kremom</h3>
-
-<p>
-Slatke mini kiflice sa kremastim punjenjem.
-</p>
-
-<div class="price">
-Cena na upit
-</div>
-
-</div>
-
-</div>
-
-
-<!-- PIZZA -->
-
-<div class="product">
-
-<img
-src="https://calgirona.com/wp-content/uploads/2022/11/IMG_6392-rotated.jpg"
-alt="Pizza mini pecivo">
-
-<div class="product-info">
-
-<h3>🍕 Kiflice sa pizza nadevom</h3>
-
-<p>
-Mini kiflice sa pizza nadevom za ljubitelje slanih zalogaja.
-</p>
-
-<div class="price">
-Cena na upit
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+  <h2 class="section-title">
+    Naša <span>ponuda</span>
+  </h2>
+
+  <div class="products">
+
+    <div class="card">
+      <img src="https://xedkfwslwvmugovbzquk.supabase.co/storage/v1/render/image/public/retailers/products/e9921f46-114f-51d4-bc36-f705073c0bc1/6a5e1469-11b9-525b-87fc-1c5f782daa95/products-zoean10inf4whbnystgv-0-02-05-9b98ba3cb87ba611232de4b12d2a769e5e8c8337f2.jpg" alt="Kiflice">
+      <div class="card-content">
+        <h3>🌶️ Kulen</h3>
+        <p>Ukusne mini kiflice sa kulenom.</p>
+        <div class="card-price">900 din / kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://recepti.zena.blic.rs/resources/images/5c/5c0f80f9d34aff49614f69105dd93369/resize/cccec851edf08e40241fc48fe168d69a_670x0.jpeg" alt="Kiflice">
+      <div class="card-content">
+        <h3>🥩 Čajna</h3>
+        <p>Mini kiflice sa čajnom kobasicom.</p>
+        <div class="card-price">900 din / kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://www.njuskalo.hr/image-xlsize/ostale-usluge/slane-slatke-plate-slika-126918971.jpg" alt="Koktel peciva">
+      <div class="card-content">
+        <h3>🥓 Suvi vrat</h3>
+        <p>Ukusne slane kiflice sa suvim vratom.</p>
+        <div class="card-price">900 din / kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://recepti.zena.blic.rs/resources/images/51/51cc13235f7b46819c247a65d1afa71a/resize/b1797de29edb84b4371c42f1bdbd771d_670x0.jpg" alt="Sirne kiflice">
+      <div class="card-content">
+        <h3>🧀 Sir</h3>
+        <p>Mini kiflice sa ukusnim sirom.</p>
+        <div class="card-price">900 din / kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://img-global.cpcdn.com/recipes/25e13608dc8f1cc/680x781cq80/pihe-puha-sajtos-szalamis-kifli-recept-foto.jpg" alt="Kiflice">
+      <div class="card-content">
+        <h3>🍫 Krem</h3>
+        <p>Slatke mini kiflice sa kremom.</p>
+        <div class="card-price">900 din / kg</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://calgirona.com/wp-content/uploads/2022/11/IMG_6392-rotated.jpg" alt="Pizza peciva">
+      <div class="card-content">
+        <h3>🍕 Pizza nadev</h3>
+        <p>Mini kiflice sa ukusnim pizza nadevom.</p>
+        <div class="card-price">900 din / kg</div>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 
+<section class="info">
 
-<!-- O NAMA -->
+  <div class="info-inner">
 
-<section id="onama" class="about">
+    <h2 class="section-title">
+      Kako možete <span>preuzeti?</span>
+    </h2>
 
-<div class="container about-grid">
+    <div class="info-grid">
 
-<div class="about-image">
+      <div class="info-box">
+        <div class="icon">🏠</div>
+        <h3>Lično preuzimanje</h3>
+        <p>
+          Poručite unapred i preuzmite svoju porudžbinu lično.
+        </p>
+      </div>
 
-<img
-src="https://remiketering.rs/assets/gallery-1-RiFgRM-5.jpg"
-alt="Koktel peciva">
+      <div class="info-box">
+        <div class="icon">🚗</div>
+        <h3>Dostava</h3>
+        <p>
+          Dostava na kućnu adresu po dogovoru.
+        </p>
+      </div>
 
-</div>
+      <div class="info-box">
+        <div class="icon">🥐</div>
+        <h3>Sveže pripremljeno</h3>
+        <p>
+          Peciva pripremamo po porudžbini.
+        </p>
+      </div>
 
+    </div>
 
-<div class="about-text">
-
-<h2>
-Ukus za svaku priliku
-</h2>
-
-<p>
-KOKTEL PECIVA priprema male i ukusne kiflice
-koje su idealne za različite vrste proslava,
-okupljanja i događaja.
-</p>
-
-<div class="points">
-
-<div class="point">
-🥐 Sveže pripremljene kiflice
-</div>
-
-<div class="point">
-❤️ Pažljivo pripremljene
-</div>
-
-<div class="point">
-🧀 Više različitih ukusa
-</div>
-
-<div class="point">
-📦 Porudžbine po dogovoru
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
+<section id="porudzbina">
 
-<!-- DOSTAVA -->
+  <h2 class="section-title">
+    Pošalji <span>porudžbinu</span>
+  </h2>
 
-<section id="dostava" class="delivery">
+  <div class="order">
 
-<div class="container">
+    <form action="https://formspree.io/f/mljelegk" method="POST">
 
-<div class="title">
+      <div class="form-group">
+        <label for="ime">Ime i prezime *</label>
+        <input
+          type="text"
+          id="ime"
+          name="Ime i prezime"
+          placeholder="Unesite ime i prezime"
+          required
+        >
+      </div>
 
-<h2>Preuzimanje i dostava</h2>
+      <div class="form-group">
+        <label for="telefon">Telefon *</label>
+        <input
+          type="tel"
+          id="telefon"
+          name="Telefon"
+          placeholder="06x xxx xxxx"
+          required
+        >
+      </div>
 
-<p>
-Vi birate šta vam više odgovara.
-</p>
+      <div class="form-group">
+        <label for="ukus">Izaberite ukus *</label>
 
-</div>
+        <select id="ukus" name="Ukus" required>
 
+          <option value="">-- Izaberite --</option>
 
-<div class="delivery-boxes">
+          <option value="Kulen">
+            Kulen
+          </option>
 
+          <option value="Čajna">
+            Čajna
+          </option>
 
-<div class="delivery-box">
+          <option value="Suvi vrat">
+            Suvi vrat
+          </option>
 
-<div class="delivery-icon">
-🤝
-</div>
+          <option value="Sir">
+            Sir
+          </option>
 
-<h3>Lično preuzimanje</h3>
+          <option value="Krem">
+            Krem
+          </option>
 
-<p>
-Porudžbinu možete lično preuzeti
-na dogovorenoj lokaciji.
-</p>
+          <option value="Pizza nadev">
+            Pizza nadev
+          </option>
 
-</div>
+          <option value="Mešano">
+            Mešano
+          </option>
 
+        </select>
 
-<div class="delivery-box">
+      </div>
 
-<div class="delivery-icon">
-🏠
-</div>
+      <div class="form-group">
+        <label for="kolicina">
+          Količina (kg) *
+        </label>
 
-<h3>Dostava na kućnu adresu</h3>
+        <input
+          type="number"
+          id="kolicina"
+          name="Količina (kg)"
+          min="1"
+          step="0.5"
+          placeholder="npr. 2"
+          required
+        >
+      </div>
 
-<p>
-Mogućnost dostave na vašu kućnu adresu
-uz prethodni dogovor.
-</p>
+      <div class="form-group">
 
-</div>
+        <label for="preuzimanje">
+          Način preuzimanja *
+        </label>
 
+        <select
+          id="preuzimanje"
+          name="Način preuzimanja"
+          required
+          onchange="prikaziAdresu()"
+        >
 
-</div>
+          <option value="">
+            -- Izaberite --
+          </option>
 
-</div>
+          <option value="Lično preuzimanje">
+            Lično preuzimanje
+          </option>
+
+          <option value="Dostava na kućnu adresu">
+            Dostava na kućnu adresu
+          </option>
+
+        </select>
+
+      </div>
+
+      <div
+        class="form-group"
+        id="addressBox"
+      >
+
+        <label for="adresa">
+          Adresa za dostavu *
+        </label>
+
+        <input
+          type="text"
+          id="adresa"
+          name="Adresa za dostavu"
+          placeholder="Ulica i broj, mesto"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="datum">
+          Željeni datum *
+        </label>
+
+        <input
+          type="date"
+          id="datum"
+          name="Željeni datum"
+          required
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="napomena">
+          Napomena
+        </label>
+
+        <textarea
+          id="napomena"
+          name="Napomena"
+          placeholder="Dodatna napomena..."
+        ></textarea>
+
+      </div>
+
+      <input
+        type="hidden"
+        name="Cena"
+        value="900 din/kg"
+      >
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nova porudžbina - KOKTEL PECIVA"
+      >
+
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        🥐 POŠALJI PORUDŽBINU
+      </button>
+
+    </form>
+
+  </div>
 
 </section>
 
+<section id="kontakt">
 
-<!-- PORUČIVANJE -->
+  <div class="contact">
 
-<section id="poruci" class="order">
+    <h2 class="section-title">
+      Kontakt
+    </h2>
 
-<div class="container">
+    <p>
+      Za porudžbine i dodatne informacije pozovite nas:
+    </p>
 
-<div class="title">
+    <a
+      href="tel:0628141211"
+      class="phone"
+    >
+      📞 062 814 1211
+    </a>
 
-<h2>Poručite kiflice</h2>
+    <br><br>
 
-<p>
-Popunite formular i kontaktiraćemo vas radi potvrde porudžbine.
-</p>
+    <a
+      href="tel:0628141211"
+      class="btn"
+    >
+      POZOVI ODMAH
+    </a>
 
-</div>
-
-
-<div class="order-box">
-
-<form
-action="https://formspree.io/f/YOUR_FORM_ID"
-method="POST"
->
-
-
-<label>
-Ime i prezime
-</label>
-
-<input
-type="text"
-name="ime"
-placeholder="Unesite ime i prezime"
-required
->
-
-
-<label>
-Broj telefona
-</label>
-
-<input
-type="tel"
-name="telefon"
-placeholder="062..."
-required
->
-
-
-<label>
-Vrsta kiflica
-</label>
-
-<select name="ukus" required>
-
-<option value="">
-Izaberite ukus
-</option>
-
-<option>
-Kulen
-</option>
-
-<option>
-Čajna
-</option>
-
-<option>
-Suvi vrat
-</option>
-
-<option>
-Sir
-</option>
-
-<option>
-Krem
-</option>
-
-<option>
-Pizza nadev
-</option>
-
-<option>
-Mešano
-</option>
-
-</select>
-
-
-<label>
-Količina
-</label>
-
-<input
-type="number"
-name="kolicina"
-placeholder="Broj komada"
-min="1"
-required
->
-
-
-<label>
-Način preuzimanja
-</label>
-
-<select
-name="nacin_preuzimanja"
-id="deliveryType"
-required
-onchange="showAddress()"
->
-
-<option value="">
-Izaberite način
-</option>
-
-<option value="Lično preuzimanje">
-Lično preuzimanje
-</option>
-
-<option value="Dostava na kućnu adresu">
-Dostava na kućnu adresu
-</option>
-
-</select>
-
-
-<div id="addressBox">
-
-<label>
-Adresa za dostavu
-</label>
-
-<input
-type="text"
-name="adresa"
-id="address"
-placeholder="Ulica i broj, mesto"
->
-
-</div>
-
-
-<label>
-Datum preuzimanja / dostave
-</label>
-
-<input
-type="date"
-name="datum"
-required
->
-
-
-<label>
-Napomena
-</label>
-
-<textarea
-name="napomena"
-placeholder="Npr. želim mešano 100 komada..."
-></textarea>
-
-
-<div class="notice">
-📌 Nakon slanja porudžbine kontaktiraćemo vas
-radi potvrde količine, cene i termina.
-</div>
-
-
-<button
-type="submit"
-class="btn"
->
-🥐 POŠALJI PORUDŽBINU
-</button>
-
-
-</form>
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
-
-<!-- KONTAKT -->
-
-<section id="kontakt" class="contact">
-
-<div class="container">
-
-<h2>
-Poručite odmah
-</h2>
-
-<p>
-Za porudžbine i dodatne informacije pozovite nas.
-</p>
-
-<a
-href="tel:0628141211"
-class="phone"
->
-📞 062 814 1211
-</a>
-
-<a
-href="tel:0628141211"
-class="btn"
->
-POZOVI ODMAH
-</a>
-
-</div>
-
-</section>
-
 
 <footer>
 
-© 2026 KOKTEL PECIVA
-<br>
-Mini kiflice za svaku priliku 🥐
+  <p>
+    © 2026 KOKTEL PECIVA
+  </p>
+
+  <p>
+    Domaće koktel pecivo za svaku priliku 🥐
+  </p>
 
 </footer>
 
-
 <a
-href="tel:0628141211"
-class="call"
+  href="tel:0628141211"
+  class="floating-call"
+  aria-label="Pozovi"
 >
-📞
+  📞
 </a>
-
 
 <script>
 
-function showAddress(){
+  function prikaziAdresu() {
 
-    const type =
-        document.getElementById("deliveryType").value;
+    const izbor =
+      document.getElementById("preuzimanje").value;
 
-    const box =
-        document.getElementById("addressBox");
+    const addressBox =
+      document.getElementById("addressBox");
 
-    const address =
-        document.getElementById("address");
+    const adresa =
+      document.getElementById("adresa");
 
-    if(type === "Dostava na kućnu adresu"){
+    if (izbor === "Dostava na kućnu adresu") {
 
-        box.style.display = "block";
-        address.required = true;
+      addressBox.style.display = "block";
 
-    }else{
+      adresa.required = true;
 
-        box.style.display = "none";
-        address.required = false;
-        address.value = "";
+    } else {
+
+      addressBox.style.display = "none";
+
+      adresa.required = false;
+
+      adresa.value = "";
 
     }
 
-}
+  }
 
 </script>
 
