@@ -6,10 +6,9 @@
 
 <title>KOKTEL PECIVA | Bački Jarak</title>
 
-<meta name="description" content="KOKTEL PECIVA - domaće mini kiflice u Bačkom Jarku. Kulen, čajna, suvi vrat, sir, krem i pizza nadev. 900 din/kg. Radimo po porudžbini. Poručivanje najmanje 1 dan ranije.">
+<meta name="description" content="KOKTEL PECIVA - domaće koktel kiflice i burekčići u Bačkom Jarku. Radimo po porudžbini. Poručivanje najmanje 1 dan ranije.">
 
 <style>
-
 *{
     box-sizing:border-box;
     margin:0;
@@ -26,8 +25,6 @@ body{
     color:#292929;
     line-height:1.6;
 }
-
-/* HEADER */
 
 header{
     background:#111;
@@ -64,8 +61,6 @@ nav a:hover{
     color:#ffb300;
 }
 
-/* HERO */
-
 .hero{
     min-height:650px;
     display:flex;
@@ -73,12 +68,10 @@ nav a:hover{
     justify-content:center;
     text-align:center;
     padding:60px 20px;
-
     background:
     linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
     url("https://remiketering.rs/assets/gallery-1-RiFgRM-5.jpg")
     center/cover;
-
     color:white;
 }
 
@@ -147,8 +140,6 @@ nav a:hover{
     transform:translateY(-2px);
 }
 
-/* SECTIONS */
-
 section{
     max-width:1100px;
     margin:auto;
@@ -164,8 +155,6 @@ section{
 .section-title span{
     color:#e69a00;
 }
-
-/* PRODUCTS */
 
 .products{
     display:grid;
@@ -213,8 +202,6 @@ section{
     font-weight:900;
 }
 
-/* INFO */
-
 .info{
     background:#111;
     color:white;
@@ -250,8 +237,6 @@ section{
     color:#ffb300;
     margin-bottom:8px;
 }
-
-/* ORDER */
 
 .order{
     background:white;
@@ -292,6 +277,10 @@ textarea{
     display:none;
 }
 
+#burekBox{
+    display:none;
+}
+
 .submit-btn{
     width:100%;
     background:#ffb300;
@@ -307,8 +296,6 @@ textarea{
 .submit-btn:hover{
     background:#ffc533;
 }
-
-/* CONTACT */
 
 .contact{
     text-align:center;
@@ -327,16 +314,12 @@ textarea{
     color:#e69a00;
 }
 
-/* FOOTER */
-
 footer{
     background:#111;
     color:#aaa;
     text-align:center;
     padding:25px 15px;
 }
-
-/* FLOATING CALL */
 
 .floating-call{
     position:fixed;
@@ -355,8 +338,6 @@ footer{
     box-shadow:0 5px 20px rgba(0,0,0,.3);
     z-index:2000;
 }
-
-/* MOBILE */
 
 @media(max-width:800px){
 
@@ -415,7 +396,6 @@ footer{
         font-size:29px;
     }
 }
-
 </style>
 </head>
 
@@ -440,23 +420,21 @@ footer{
 </header>
 
 
-<!-- POČETNA STRANA -->
-
 <section class="hero">
 
 <div class="hero-content">
 
 <h1>KOKTEL PECIVA</h1>
 
-<h2>Domaće mini kiflice za svaku priliku</h2>
+<h2>Domaće mini kiflice i burekčići za svaku priliku</h2>
 
 <p class="hero-description">
-Slane i slatke mini kiflice pripremljene po porudžbini,
-idealne za proslave, rođendane, slave, druženja i sve posebne prilike.
+Ukusna slana i slatka peciva pripremljena po porudžbini,
+idealna za proslave, rođendane, slave, druženja i sve posebne prilike.
 </p>
 
 <div class="price">
-900 din / KG
+KIFLICE: 900 din / KG
 </div>
 
 <div class="hero-info">
@@ -484,8 +462,6 @@ idealne za proslave, rođendane, slave, druženja i sve posebne prilike.
 </section>
 
 
-<!-- PONUDA -->
-
 <section id="ponuda">
 
 <h2 class="section-title">
@@ -495,29 +471,30 @@ Naša <span>ponuda</span>
 <div class="products">
 
 
+<!-- KULEN -->
+
 <div class="card">
 
 <img
 src="https://xedkfwslwvmugovbzquk.supabase.co/storage/v1/render/image/public/retailers/products/e9921f46-114f-51d4-bc36-f705073c0bc1/6a5e1469-11b9-525b-87fc-1c5f782daa95/products-zoean10inf4whbnystgv-0-02-05-9b98ba3cb87ba611232de4b12d2a769e5e8c8337f2.jpg"
-alt="Kiflice sa kulenom"
+alt="Kiflice"
 >
 
 <div class="card-content">
 
 <h3>🌶️ Kulen</h3>
 
-<p>
-Mini kiflice sa kulenom.
-</p>
+<p>Mini kiflice sa kulenom.</p>
 
 <div class="card-price">
 900 din / kg
 </div>
 
 </div>
-
 </div>
 
+
+<!-- ČAJNA -->
 
 <div class="card">
 
@@ -530,18 +507,17 @@ alt="Slane kiflice"
 
 <h3>🥩 Čajna</h3>
 
-<p>
-Mini kiflice sa čajnom kobasicom.
-</p>
+<p>Mini kiflice sa čajnom kobasicom.</p>
 
 <div class="card-price">
 900 din / kg
 </div>
 
 </div>
-
 </div>
 
+
+<!-- SUVI VRAT -->
 
 <div class="card">
 
@@ -554,18 +530,17 @@ alt="Koktel peciva"
 
 <h3>🥓 Suvi vrat</h3>
 
-<p>
-Ukusne slane kiflice sa suvim vratom.
-</p>
+<p>Ukusne slane kiflice sa suvim vratom.</p>
 
 <div class="card-price">
 900 din / kg
 </div>
 
 </div>
-
 </div>
 
+
+<!-- SIR -->
 
 <div class="card">
 
@@ -578,64 +553,84 @@ alt="Sirne kiflice"
 
 <h3>🧀 Sir</h3>
 
-<p>
-Mini kiflice sa ukusnim sirom.
-</p>
+<p>Mini kiflice sa ukusnim sirom.</p>
 
 <div class="card-price">
 900 din / kg
 </div>
 
 </div>
-
 </div>
 
+
+<!-- KREM -->
 
 <div class="card">
 
 <img
-src="https://img-global.cpcdn.com/recipes/25e13608dc8f1cc/680x781cq80/pihe-puha-sajtos-szalamis-kifli-recept-foto.jpg"
-alt="Kiflice"
+src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=900&q=80"
+alt="Slatko pecivo sa kremom"
 >
 
 <div class="card-content">
 
 <h3>🍫 Krem</h3>
 
-<p>
-Slatke mini kiflice sa kremom.
-</p>
+<p>Slatke mini kiflice sa kremom.</p>
 
 <div class="card-price">
 900 din / kg
 </div>
 
 </div>
-
 </div>
 
+
+<!-- PIZZA -->
 
 <div class="card">
 
 <img
 src="https://calgirona.com/wp-content/uploads/2022/11/IMG_6392-rotated.jpg"
-alt="Pizza peciva"
+alt="Pizza pecivo"
 >
 
 <div class="card-content">
 
 <h3>🍕 Pizza nadev</h3>
 
-<p>
-Mini kiflice sa pizza nadevom.
-</p>
+<p>Mini kiflice sa pizza nadevom.</p>
 
 <div class="card-price">
 900 din / kg
 </div>
 
 </div>
+</div>
 
+
+<!-- BUREKČIĆI -->
+
+<div class="card">
+
+<img
+src="https://cdn.navidiku.rs/firme/proizvodgalerija3/galerija107115/slani-zalogaji-ketering-kragujevac-97e81e-984b01f3-1-580x400.jpg"
+alt="Burekčići"
+>
+
+<div class="card-content">
+
+<h3>🥟 Burekčići</h3>
+
+<p>
+Sir • Meso • Krompir • Pica
+</p>
+
+<div class="card-price">
+Cena na upit
+</div>
+
+</div>
 </div>
 
 
@@ -643,8 +638,6 @@ Mini kiflice sa pizza nadevom.
 
 </section>
 
-
-<!-- PREUZIMANJE -->
 
 <section class="info">
 
@@ -659,9 +652,7 @@ Kako možete <span>preuzeti?</span>
 
 <div class="info-box">
 
-<div class="icon">
-🏠
-</div>
+<div class="icon">🏠</div>
 
 <h3>Lično preuzimanje</h3>
 
@@ -674,9 +665,7 @@ Preuzimanje porudžbine u Bačkom Jarku.
 
 <div class="info-box">
 
-<div class="icon">
-🚗
-</div>
+<div class="icon">🚗</div>
 
 <h3>Dostava</h3>
 
@@ -689,9 +678,7 @@ Dostava na kućnu adresu po dogovoru.
 
 <div class="info-box">
 
-<div class="icon">
-📅
-</div>
+<div class="icon">📅</div>
 
 <h3>Poručivanje</h3>
 
@@ -709,8 +696,6 @@ Poručite najmanje 1 dan ranije.
 
 </section>
 
-
-<!-- PORUDŽBINA -->
 
 <section id="porudzbina">
 
@@ -762,14 +747,15 @@ required
 
 <div class="form-group">
 
-<label for="ukus">
-Izaberite ukus *
+<label for="proizvod">
+Šta želite da poručite? *
 </label>
 
 <select
-id="ukus"
-name="Ukus"
+id="proizvod"
+name="Proizvod"
 required
+onchange="prikaziBurek()"
 >
 
 <option value="">
@@ -777,31 +763,78 @@ required
 </option>
 
 <option value="Kulen">
-Kulen
+Kiflice - Kulen
 </option>
 
 <option value="Čajna">
-Čajna
+Kiflice - Čajna
 </option>
 
 <option value="Suvi vrat">
-Suvi vrat
+Kiflice - Suvi vrat
 </option>
 
 <option value="Sir">
-Sir
+Kiflice - Sir
 </option>
 
 <option value="Krem">
-Krem
+Kiflice - Krem
 </option>
 
 <option value="Pizza nadev">
-Pizza nadev
+Kiflice - Pizza nadev
+</option>
+
+<option value="Burekčići">
+Burekčići
 </option>
 
 <option value="Mešano">
 Mešano
+</option>
+
+</select>
+
+</div>
+
+
+<div
+class="form-group"
+id="burekBox"
+>
+
+<label for="burek">
+Vrsta burekčića
+</label>
+
+<select
+id="burek"
+name="Vrsta burekčića"
+>
+
+<option value="">
+-- Izaberite --
+</option>
+
+<option value="Sir">
+🧀 Sir
+</option>
+
+<option value="Meso">
+🥩 Meso
+</option>
+
+<option value="Krompir">
+🥔 Krompir
+</option>
+
+<option value="Pica">
+🍕 Pica
+</option>
+
+<option value="Mešano">
+🥟 Mešano
 </option>
 
 </select>
@@ -910,13 +943,6 @@ placeholder="Dodatna napomena..."
 
 <input
 type="hidden"
-name="Cena"
-value="900 din/kg"
->
-
-
-<input
-type="hidden"
 name="_subject"
 value="Nova porudžbina - KOKTEL PECIVA"
 >
@@ -937,8 +963,6 @@ class="submit-btn"
 </section>
 
 
-<!-- KONTAKT -->
-
 <section id="kontakt">
 
 <div class="contact">
@@ -948,7 +972,7 @@ Kontakt
 </h2>
 
 <p>
-Za porudžbine i dodatne informacije pozovite nas:
+Za porudžbine i dodatne informacije:
 </p>
 
 <a
@@ -1011,7 +1035,6 @@ document.getElementById("addressBox");
 const adresa =
 document.getElementById("adresa");
 
-
 if(izbor === "Dostava na kućnu adresu"){
 
 addressBox.style.display="block";
@@ -1030,8 +1053,37 @@ adresa.value="";
 
 }
 
-</script>
 
+function prikaziBurek(){
+
+const proizvod =
+document.getElementById("proizvod").value;
+
+const burekBox =
+document.getElementById("burekBox");
+
+const burek =
+document.getElementById("burek");
+
+if(proizvod === "Burekčići"){
+
+burekBox.style.display="block";
+
+burek.required=true;
+
+}else{
+
+burekBox.style.display="none";
+
+burek.required=false;
+
+burek.value="";
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
