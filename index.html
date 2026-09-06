@@ -6,7 +6,7 @@
 
 <title>KOKTEL PECIVA Bački Jarak | Mini kiflice, burekčići i takitosi</title>
 
-<meta name="description" content="KOKTEL PECIVA Bački Jarak – domaće mini kiflice, burekčići i takitosi sa piletinom. Radimo po porudžbini. Lično preuzimanje i dostava.">
+<meta name="description" content="KOKTEL PECIVA Bački Jarak - domaće mini kiflice, burekčići i takitos sa piletinom. Lično preuzimanje i dostava.">
 
 <style>
 * {
@@ -22,30 +22,35 @@ html {
 body {
     font-family: Arial, sans-serif;
     background: #111;
-    color: #fff;
+    color: white;
     line-height: 1.6;
 }
 
 header {
-    background: #000;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: rgba(0,0,0,0.95);
     border-bottom: 2px solid #f5c400;
 }
 
+.nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
-    font-size: 25px;
-    font-weight: bold;
     color: #f5c400;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     margin-left: 20px;
     font-weight: bold;
@@ -56,7 +61,7 @@ nav a:hover {
 }
 
 .hero {
-    min-height: 80vh;
+    min-height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,8 +69,8 @@ nav a:hover {
     padding: 50px 20px;
 
     background:
-        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.75)),
-        url("https://remiketering.rs/wp-content/uploads/2023/05/ketering.jpg");
+        linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.80)),
+        url("https://remiketering.rs/assets/gallery-1-RiFgRM-5.jpg");
 
     background-size: cover;
     background-position: center;
@@ -82,46 +87,68 @@ nav a:hover {
 }
 
 .hero h2 {
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
-.price {
-    font-size: 25px;
-    color: #f5c400;
-    font-weight: bold;
+.price-big {
+    display: inline-block;
     margin: 20px 0;
+    padding: 12px 25px;
+    background: #f5c400;
+    color: #111;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 20px;
 }
 
 .btn {
     display: inline-block;
-    background: #f5c400;
-    color: #000;
-    padding: 14px 28px;
-    border-radius: 8px;
+    padding: 14px 25px;
+    margin: 7px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 15px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background: #fff;
+.btn-yellow {
+    background: #f5c400;
+    color: #111;
+}
+
+.btn-yellow:hover {
     transform: scale(1.05);
 }
 
+.btn-dark {
+    border: 2px solid #f5c400;
+    color: #f5c400;
+}
+
+.btn-dark:hover {
+    background: #f5c400;
+    color: #111;
+}
+
 section {
-    padding: 70px 6%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
 }
 
 .section-title {
     text-align: center;
-    font-size: 35px;
+    font-size: 38px;
     color: #f5c400;
     margin-bottom: 40px;
 }
@@ -133,11 +160,11 @@ section {
 }
 
 .card {
-    background: #1b1b1b;
-    border-radius: 15px;
+    background: #1c1c1c;
+    border-radius: 18px;
     overflow: hidden;
     border: 1px solid #333;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .card:hover {
@@ -158,57 +185,54 @@ section {
 
 .card h3 {
     color: #f5c400;
-    font-size: 23px;
+    font-size: 24px;
     margin-bottom: 8px;
 }
 
 .card p {
     color: #ddd;
+    min-height: 45px;
 }
 
 .card-price {
-    color: #f5c400;
+    margin-top: 15px;
+    font-size: 20px;
     font-weight: bold;
-    margin-top: 12px;
-    font-size: 18px;
 }
 
-.info {
-    background: #181818;
-}
-
-.info-grid {
+.info-boxes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+}
+
+.info {
+    background: #1c1c1c;
+    border: 1px solid #333;
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
 }
 
-.info-box {
-    background: #222;
-    padding: 25px;
-    border-radius: 12px;
+.info span {
+    font-size: 35px;
 }
 
-.info-box h3 {
+.info h3 {
     color: #f5c400;
-    margin-bottom: 8px;
+    margin: 10px 0;
 }
 
-.order {
-    background: #0d0d0d;
-}
-
-form {
-    max-width: 650px;
+.order-box {
+    max-width: 700px;
     margin: auto;
-    background: #1a1a1a;
+    background: #1c1c1c;
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1px solid #333;
 }
 
-label {
+form label {
     display: block;
     margin-top: 15px;
     margin-bottom: 6px;
@@ -220,89 +244,84 @@ select,
 textarea {
     width: 100%;
     padding: 13px;
-    border-radius: 7px;
-    border: none;
-    outline: none;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background: #111;
+    color: white;
     font-size: 16px;
 }
 
 textarea {
-    min-height: 110px;
+    min-height: 100px;
     resize: vertical;
 }
 
-.hidden {
-    display: none;
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f5c400;
 }
 
 .submit-btn {
     width: 100%;
-    border: none;
-    cursor: pointer;
-    font-size: 17px;
     margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #f5c400;
+    color: #111;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.success {
-    display: none;
-    background: #174d21;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-    text-align: center;
+.submit-btn:hover {
+    transform: scale(1.02);
 }
 
 .contact {
     text-align: center;
-    background: #151515;
 }
 
-.contact h2 {
+.contact-number {
+    display: inline-block;
+    margin: 20px 0;
     color: #f5c400;
-    margin-bottom: 15px;
-}
-
-.phone {
-    font-size: 28px;
-    color: #f5c400;
+    font-size: 30px;
     font-weight: bold;
     text-decoration: none;
 }
 
-.location {
-    margin-top: 10px;
-    color: #ddd;
-}
-
 footer {
-    background: #000;
+    background: #080808;
+    border-top: 2px solid #f5c400;
     text-align: center;
-    padding: 25px;
+    padding: 30px 20px;
     color: #aaa;
 }
 
-.call-button {
+.phone-button {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 999;
     width: 60px;
     height: 60px;
-    background: #f5c400;
-    color: #000;
     border-radius: 50%;
+    background: #f5c400;
+    color: #111;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     font-size: 28px;
-    font-weight: bold;
-    z-index: 999;
-    box-shadow: 0 5px 20px rgba(0,0,0,.5);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
 }
 
 @media (max-width: 700px) {
 
-    header {
+    .nav {
         flex-direction: column;
         gap: 10px;
     }
@@ -312,24 +331,28 @@ footer {
         font-size: 14px;
     }
 
+    .hero {
+        min-height: 580px;
+    }
+
     .hero h1 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     .hero h2 {
-        font-size: 20px;
+        font-size: 23px;
     }
 
     .hero p {
-        font-size: 16px;
-    }
-
-    section {
-        padding: 50px 5%;
+        font-size: 17px;
     }
 
     .section-title {
         font-size: 30px;
+    }
+
+    .card img {
+        height: 220px;
     }
 }
 </style>
@@ -339,682 +362,693 @@ footer {
 
 <header>
 
-    <div class="logo">
-        KOKTEL PECIVA
-    </div>
+<div class="nav">
 
-    <nav>
-        <a href="#proizvodi">Proizvodi</a>
-        <a href="#porudzbina">Poruči</a>
-        <a href="#kontakt">Kontakt</a>
-    </nav>
+<div class="logo">
+KOKTEL PECIVA
+</div>
+
+<nav>
+<a href="#pocetna">Početna</a>
+<a href="#ponuda">Ponuda</a>
+<a href="#porucivanje">Poručivanje</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+</div>
 
 </header>
 
 
-<section class="hero">
+<!-- HERO -->
 
-    <div class="hero-content">
+<section class="hero" id="pocetna">
 
-        <h1>KOKTEL PECIVA</h1>
+<div class="hero-content">
 
-        <h2>Bački Jarak</h2>
+<h1>KOKTEL PECIVA</h1>
 
-        <p>
-            Domaće mini kiflice, burekčići i takitosi
-            pripremljeni po porudžbini.
-        </p>
+<h2>Bački Jarak</h2>
 
-        <p>
-            🏠 Lično preuzimanje &nbsp; | &nbsp; 🚗 Dostava na kućnu adresu
-        </p>
+<p>Domaće mini kiflice, burekčići i takitosi</p>
 
-        <div class="price">
-            Mini kiflice – 900 din/kg
-        </div>
+<p>🥐 Sveže • Ukusno • Domaće</p>
 
-        <p>
-            ⏰ Porudžbinu je potrebno naručiti najmanje 1 dan ranije.
-        </p>
+<div class="price-big">
+Mini kiflice 900 din/kg
+</div>
 
-        <a href="#porudzbina" class="btn">
-            PORUČI
-        </a>
+<p>📍 Bački Jarak</p>
 
-    </div>
+<p>📦 Lično preuzimanje ili dostava na kućnu adresu</p>
+
+<p>⏰ Porudžbinu je potrebno naručiti najmanje 1 dan ranije</p>
+
+<div class="buttons">
+
+<a href="#porucivanje" class="btn btn-yellow">
+PORUČI
+</a>
+
+<a href="tel:0628141211" class="btn btn-dark">
+POZOVI
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 
-<section id="proizvodi">
+<!-- PONUDA -->
 
-    <h2 class="section-title">
-        Naši proizvodi
-    </h2>
+<section id="ponuda">
 
-    <div class="products">
+<h2 class="section-title">
+Naša ponuda
+</h2>
 
+<div class="products">
 
-        <!-- KULEN -->
 
-        <div class="card">
+<!-- 1 KULEN -->
 
-            <img
-                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80"
-                alt="Mini kiflice sa kulenom"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://xedkfwslwvmugovbzquk.supabase.co/storage/v1/render/image/public/retailers/products/e9921f46-114f-51d4-bc36-f705073c0bc1/6a5e1469-11b9-525b-87fc-1c5f782daa95/products-zoean10inf4whbnystgv-0-02-05-9b98ba3cb87ba611232de4b12d2a769e5e8c8337f2.jpg"
+alt="Mini kiflice sa kulenom i sirom"
+>
 
-                <h3>Mini kiflice sa kulenom</h3>
+<div class="card-content">
 
-                <p>
-                    Domaće mini kiflice punjene ukusnim kulenom.
-                </p>
+<h3>Kulen</h3>
 
-                <div class="card-price">
-                    900 din/kg
-                </div>
+<p>Mini kiflice sa ukusnim kulenom.</p>
 
-            </div>
+<div class="card-price">
+900 din/kg
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- ČAJNA -->
 
-        <div class="card">
+<!-- 2 ČAJNA -->
 
-            <img
-                src="https://static.maxi.rs/medias/sys_master/h13/h74/8838157631518.jpg?buildNumber=24de80dd348eeb451d4c585b5367e2306b3758e7275436f3111c22e68f2806b0"
-                alt="Mini kiflice sa čajnom"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://static.maxi.rs/medias/sys_master/h13/h74/8838157631518.jpg?buildNumber=24de80dd348eeb451d4c585b5367e2306b3758e7275436f3111c22e68f2806b0"
+alt="Mini kiflice sa čajnom kobasicom"
+>
 
-                <h3>Mini kiflice sa čajnom</h3>
+<div class="card-content">
 
-                <p>
-                    Sočne domaće kiflice sa čajnom kobasicom.
-                </p>
+<h3>Čajna</h3>
 
-                <div class="card-price">
-                    900 din/kg
-                </div>
+<p>Mini kiflice sa čajnom kobasicom.</p>
 
-            </div>
+<div class="card-price">
+900 din/kg
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- SUVI VRAT -->
 
-        <div class="card">
+<!-- 3 SUVI VRAT -->
 
-            <img
-                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=80"
-                alt="Mini kiflice sa suvim vratom"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://recepti.zena.blic.rs/resources/images/5c/5c0f80f9d34aff49614f69105dd93369/resize/cccec851edf08e40241fc48fe168d69a_670x0.jpeg"
+alt="Kiflice sa suvim vratom"
+>
 
-                <h3>Mini kiflice sa suvim vratom</h3>
+<div class="card-content">
 
-                <p>
-                    Domaće mini kiflice sa ukusnim suvim vratom.
-                </p>
+<h3>Suvi vrat</h3>
 
-                <div class="card-price">
-                    900 din/kg
-                </div>
+<p>Mini kiflice sa suvim vratom.</p>
 
-            </div>
+<div class="card-price">
+900 din/kg
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- SIR -->
 
-        <div class="card">
+<!-- 4 SIR -->
 
-            <img
-                src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=900&q=80"
-                alt="Mini kiflice sa sirom"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://recepti.zena.blic.rs/resources/images/51/51cc13235f7b46819c247a65d1afa71a/resize/b1797de29edb84b4371c42f1bdbd771d_670x0.jpg"
+alt="Kiflice sa sirom"
+>
 
-                <h3>Mini kiflice sa sirom</h3>
+<div class="card-content">
 
-                <p>
-                    Mekane domaće kiflice sa ukusnim sirom.
-                </p>
+<h3>Sir</h3>
 
-                <div class="card-price">
-                    900 din/kg
-                </div>
+<p>Domaće mini kiflice punjene sirom.</p>
 
-            </div>
+<div class="card-price">
+900 din/kg
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- KREM -->
 
-        <div class="card">
+<!-- 5 KREM -->
 
-            <img
-                src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=900&q=80"
-                alt="Mini kiflice sa kremom"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=900&q=80"
+alt="Krem kiflice"
+>
 
-                <h3>Mini kiflice sa kremom</h3>
+<div class="card-content">
 
-                <p>
-                    Slatke mini kiflice punjene kremom.
-                </p>
+<h3>Krem</h3>
 
-                <div class="card-price">
-                    900 din/kg
-                </div>
+<p>Slatke mini kiflice sa kremom.</p>
 
-            </div>
+<div class="card-price">
+900 din/kg
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- PIZZA -->
 
-        <div class="card">
+<!-- 6 PIZZA -->
 
-            <img
-                src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=80"
-                alt="Mini pizza kiflice"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://calgirona.com/wp-content/uploads/2022/11/IMG_6392-rotated.jpg"
+alt="Pizza kiflice"
+>
 
-                <h3>Mini kiflice – pizza nadev</h3>
+<div class="card-content">
 
-                <p>
-                    Mini kiflice sa ukusnim pizza nadevom.
-                </p>
+<h3>Pizza nadev</h3>
 
-                <div class="card-price">
-                    900 din/kg
-                </div>
+<p>Mini kiflice sa ukusnim pizza nadevom.</p>
 
-            </div>
+<div class="card-price">
+900 din/kg
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- BUREKČIĆI -->
 
-        <div class="card">
+<!-- 7 BUREKČIĆI -->
 
-            <img
-                src="https://image.dnevnik.hr/media/images/600x645/Sep2025/63145426-burekcici.jpg"
-                alt="Burekčići"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://image.dnevnik.hr/media/images/600x645/Sep2025/63145426-burekcici.jpg"
+alt="Burekčići"
+>
 
-                <h3>Burekčići</h3>
+<div class="card-content">
 
-                <p>
-                    Mali domaći burekčići – sir, meso,
-                    krompir, pica ili mešano.
-                </p>
+<h3>🥟 Burekčići</h3>
 
-                <div class="card-price">
-                    Cena na upit
-                </div>
+<p>
+Sir • Meso • Krompir • Pica
+</p>
 
-            </div>
+<div class="card-price">
+Cena na upit
+</div>
 
-        </div>
+</div>
 
+</div>
 
-        <!-- TAKITOS -->
 
-        <div class="card">
+<!-- 8 TAKITOS -->
 
-            <img
-                src="https://img1.wsimg.com/isteam/ip/8f86f93c-684c-4deb-bdc5-fb7e54437cfc/Gemini_Generated_Image_wg64f0wg64f0wg64.png"
-                alt="Takitos sa piletinom"
-            >
+<div class="card">
 
-            <div class="card-content">
+<img
+src="https://www.yellowblissroad.com/wp-content/uploads/2018/03/Cream-Cheese-and-Chicken-Taquitos-1-of-8.jpg"
+alt="Takitos sa piletinom"
+>
 
-                <h3>Takitos sa piletinom</h3>
+<div class="card-content">
 
-                <p>
-                    Hrskavi takitosi punjeni ukusnom piletinom.
-                </p>
+<h3>🌯 Takitos sa piletinom</h3>
 
-                <div class="card-price">
-                    Cena na upit
-                </div>
+<p>
+Hrskavi takitosi punjeni piletinom.
+</p>
 
-            </div>
+<div class="card-price">
+Cena na upit
+</div>
 
-        </div>
+</div>
 
+</div>
 
-    </div>
+
+</div>
 
 </section>
 
 
-<section class="info">
+<!-- INFORMACIJE -->
 
-    <h2 class="section-title">
-        Kako funkcioniše poručivanje?
-    </h2>
+<section>
 
-    <div class="info-grid">
+<h2 class="section-title">
+Zašto KOKTEL PECIVA?
+</h2>
 
-        <div class="info-box">
+<div class="info-boxes">
 
-            <h3>1. Izaberite proizvod</h3>
+<div class="info">
 
-            <p>
-                Izaberite kiflice, burekčiće ili takitose.
-            </p>
+<span>🏠</span>
 
-        </div>
+<h3>Domaće</h3>
 
-        <div class="info-box">
+<p>Pravimo po porudžbini.</p>
 
-            <h3>2. Pošaljite porudžbinu</h3>
+</div>
 
-            <p>
-                Popunite jednostavan formular za poručivanje.
-            </p>
+<div class="info">
 
-        </div>
+<span>🥐</span>
 
-        <div class="info-box">
+<h3>Sveže</h3>
 
-            <h3>3. Potvrđujemo porudžbinu</h3>
+<p>Sveže pripremljeno za vašu porudžbinu.</p>
 
-            <p>
-                Kontaktiraćemo vas telefonom radi potvrde.
-            </p>
+</div>
 
-        </div>
+<div class="info">
 
-        <div class="info-box">
+<span>🚗</span>
 
-            <h3>4. Preuzimanje ili dostava</h3>
+<h3>Dostava</h3>
 
-            <p>
-                Lično preuzimanje ili dostava na kućnu adresu.
-            </p>
+<p>Dostava na kućnu adresu.</p>
 
-        </div>
+</div>
 
-    </div>
+<div class="info">
+
+<span>📦</span>
+
+<h3>Lično preuzimanje</h3>
+
+<p>Moguće lično preuzimanje u Bačkom Jarku.</p>
+
+</div>
+
+</div>
 
 </section>
 
 
-<section id="porudzbina" class="order">
+<!-- PORUČIVANJE -->
 
-    <h2 class="section-title">
-        Poruči
-    </h2>
+<section id="porucivanje">
 
-    <form
-        action="https://formspree.io/f/mljelegk"
-        method="POST"
-        id="orderForm"
-    >
+<h2 class="section-title">
+Poručite
+</h2>
 
-        <label for="ime">
-            Ime i prezime
-        </label>
+<div class="order-box">
 
-        <input
-            type="text"
-            id="ime"
-            name="Ime i prezime"
-            placeholder="Unesite ime i prezime"
-            required
-        >
+<p style="text-align:center; margin-bottom:20px; color:#ddd;">
+Porudžbinu je potrebno naručiti najmanje 1 dan ranije.
+</p>
 
+<form action="https://formspree.io/f/mljelegk" method="POST">
 
-        <label for="telefon">
-            Telefon
-        </label>
+<label for="ime">
+Ime i prezime
+</label>
 
-        <input
-            type="tel"
-            id="telefon"
-            name="Telefon"
-            placeholder="06x xxx xxxx"
-            required
-        >
+<input
+type="text"
+id="ime"
+name="Ime i prezime"
+placeholder="Unesite ime i prezime"
+required
+>
 
+<label for="telefon">
+Telefon
+</label>
 
-        <label for="proizvod">
-            Proizvod
-        </label>
+<input
+type="tel"
+id="telefon"
+name="Telefon"
+placeholder="062 123 4567"
+required
+>
 
-        <select
-            id="proizvod"
-            name="Proizvod"
-            required
-        >
+<label for="proizvod">
+Proizvod
+</label>
 
-            <option value="">
-                Izaberite proizvod
-            </option>
+<select
+id="proizvod"
+name="Proizvod"
+required
+>
 
-            <option value="Mini kiflice - kulen">
-                Mini kiflice – kulen
-            </option>
+<option value="">
+Izaberite proizvod
+</option>
 
-            <option value="Mini kiflice - čajna">
-                Mini kiflice – čajna
-            </option>
+<option value="Kiflice - kulen">
+Kiflice - kulen
+</option>
 
-            <option value="Mini kiflice - suvi vrat">
-                Mini kiflice – suvi vrat
-            </option>
+<option value="Kiflice - čajna">
+Kiflice - čajna
+</option>
 
-            <option value="Mini kiflice - sir">
-                Mini kiflice – sir
-            </option>
+<option value="Kiflice - suvi vrat">
+Kiflice - suvi vrat
+</option>
 
-            <option value="Mini kiflice - krem">
-                Mini kiflice – krem
-            </option>
+<option value="Kiflice - sir">
+Kiflice - sir
+</option>
 
-            <option value="Mini kiflice - pizza">
-                Mini kiflice – pizza nadev
-            </option>
+<option value="Kiflice - krem">
+Kiflice - krem
+</option>
 
-            <option value="Mini kiflice - mešano">
-                Mini kiflice – mešano
-            </option>
+<option value="Kiflice - pizza nadev">
+Kiflice - pizza nadev
+</option>
 
-            <option value="Burekčići">
-                Burekčići
-            </option>
+<option value="Kiflice - mešano">
+Kiflice - mešano
+</option>
 
-            <option value="Takitos sa piletinom">
-                Takitos sa piletinom
-            </option>
+<option value="Burekčići">
+Burekčići
+</option>
 
-        </select>
+<option value="Takitos sa piletinom">
+Takitos sa piletinom
+</option>
 
-
-        <div id="burekOpcija" class="hidden">
-
-            <label for="burekTip">
-                Vrsta burekčića
-            </label>
-
-            <select
-                id="burekTip"
-                name="Vrsta burekčića"
-            >
-
-                <option value="">
-                    Izaberite
-                </option>
-
-                <option value="Sir">
-                    Sir
-                </option>
-
-                <option value="Meso">
-                    Meso
-                </option>
-
-                <option value="Krompir">
-                    Krompir
-                </option>
-
-                <option value="Pica">
-                    Pica
-                </option>
-
-                <option value="Mešano">
-                    Mešano
-                </option>
-
-            </select>
-
-        </div>
+</select>
 
 
-        <label for="kolicina">
-            Količina
-        </label>
+<!-- BUREK VRSTA -->
 
-        <input
-            type="text"
-            id="kolicina"
-            name="Količina"
-            placeholder="Npr. 2 kg / 50 komada"
-            required
-        >
+<div id="burekBox" style="display:none;">
 
+<label for="burekTip">
+Vrsta burekčića
+</label>
 
-        <label for="preuzimanje">
-            Način preuzimanja
-        </label>
+<select
+id="burekTip"
+name="Vrsta burekčića"
+>
 
-        <select
-            id="preuzimanje"
-            name="Način preuzimanja"
-            required
-        >
+<option value="">
+Izaberite vrstu
+</option>
 
-            <option value="">
-                Izaberite
-            </option>
+<option value="Sir">
+Sir
+</option>
 
-            <option value="Lično preuzimanje">
-                Lično preuzimanje
-            </option>
+<option value="Meso">
+Meso
+</option>
 
-            <option value="Dostava na kućnu adresu">
-                Dostava na kućnu adresu
-            </option>
+<option value="Krompir">
+Krompir
+</option>
 
-        </select>
+<option value="Pica">
+Pica
+</option>
 
+<option value="Mešano">
+Mešano
+</option>
 
-        <div id="adresaDiv" class="hidden">
+</select>
 
-            <label for="adresa">
-                Adresa za dostavu
-            </label>
-
-            <input
-                type="text"
-                id="adresa"
-                name="Adresa za dostavu"
-                placeholder="Ulica i broj, mesto"
-            >
-
-        </div>
+</div>
 
 
-        <label for="datum">
-            Željeni datum
-        </label>
+<label for="kolicina">
+Količina
+</label>
 
-        <input
-            type="date"
-            id="datum"
-            name="Željeni datum"
-            required
-        >
-
-
-        <label for="napomena">
-            Napomena
-        </label>
-
-        <textarea
-            id="napomena"
-            name="Napomena"
-            placeholder="Dodatna napomena..."
-        ></textarea>
+<input
+type="text"
+id="kolicina"
+name="Količina"
+placeholder="Npr. 2 kg"
+required
+>
 
 
-        <button
-            type="submit"
-            class="btn submit-btn"
-        >
-            POŠALJI PORUDŽBINU
-        </button>
+<label for="preuzimanje">
+Način preuzimanja
+</label>
+
+<select
+id="preuzimanje"
+name="Način preuzimanja"
+required
+>
+
+<option value="">
+Izaberite
+</option>
+
+<option value="Lično preuzimanje">
+Lično preuzimanje
+</option>
+
+<option value="Dostava na kućnu adresu">
+Dostava na kućnu adresu
+</option>
+
+</select>
 
 
-        <div
-            class="success"
-            id="successMessage"
-        >
-            Zahtev je uspešno poslat!
-            Kontaktiraćemo vas radi potvrde vožnje.
-        </div>
+<!-- ADRESA -->
 
-    </form>
+<div id="adresaBox" style="display:none;">
+
+<label for="adresa">
+Adresa za dostavu
+</label>
+
+<input
+type="text"
+id="adresa"
+name="Adresa za dostavu"
+placeholder="Unesite adresu"
+>
+
+</div>
+
+
+<label for="datum">
+Željeni datum
+</label>
+
+<input
+type="date"
+id="datum"
+name="Željeni datum"
+required
+>
+
+
+<label for="napomena">
+Napomena
+</label>
+
+<textarea
+id="napomena"
+name="Napomena"
+placeholder="Dodatna napomena..."
+></textarea>
+
+
+<button
+type="submit"
+class="submit-btn"
+>
+POŠALJI PORUDŽBINU
+</button>
+
+</form>
+
+</div>
 
 </section>
 
+
+<!-- KONTAKT -->
 
 <section id="kontakt" class="contact">
 
-    <h2>
-        Kontakt
-    </h2>
+<h2 class="section-title">
+Kontakt
+</h2>
 
-    <a
-        href="tel:0628141211"
-        class="phone"
-    >
-        📞 062 814 1211
-    </a>
+<p>
+Za porudžbine i informacije pozovite:
+</p>
 
-    <p class="location">
-        📍 Bački Jarak
-    </p>
+<a
+href="tel:0628141211"
+class="contact-number"
+>
+📞 062 814 1211
+</a>
 
-    <p>
-        Radimo po porudžbini.
-    </p>
+<p>
+📍 Bački Jarak
+</p>
 
-    <p>
-        Porudžbinu je potrebno naručiti najmanje 1 dan ranije.
-    </p>
+<p>
+Dostava na kućnu adresu ili lično preuzimanje.
+</p>
 
 </section>
 
 
 <footer>
 
-    © 2026 KOKTEL PECIVA Bački Jarak
-    <br>
-    Domaća mini peciva po porudžbini
+<p>
+© 2026 KOKTEL PECIVA Bački Jarak
+</p>
+
+<p>
+Domaće mini kiflice, burekčići i takitosi
+</p>
 
 </footer>
 
 
+<!-- TELEFON -->
+
 <a
-    href="tel:0628141211"
-    class="call-button"
-    aria-label="Pozovi KOKTEL PECIVA"
+href="tel:0628141211"
+class="phone-button"
 >
-    ☎
+☎
 </a>
 
 
 <script>
 
+/* BUREKČIĆI */
+
 const proizvod = document.getElementById("proizvod");
-const burekOpcija = document.getElementById("burekOpcija");
-
-const preuzimanje = document.getElementById("preuzimanje");
-const adresaDiv = document.getElementById("adresaDiv");
-
-const orderForm = document.getElementById("orderForm");
-const successMessage = document.getElementById("successMessage");
-
-
-// BUREKČIĆI
+const burekBox = document.getElementById("burekBox");
+const burekTip = document.getElementById("burekTip");
 
 proizvod.addEventListener("change", function() {
 
     if (this.value === "Burekčići") {
 
-        burekOpcija.classList.remove("hidden");
+        burekBox.style.display = "block";
+        burekTip.required = true;
 
     } else {
 
-        burekOpcija.classList.add("hidden");
+        burekBox.style.display = "none";
+        burekTip.required = false;
+        burekTip.value = "";
 
     }
 
 });
 
 
-// DOSTAVA
+/* DOSTAVA */
+
+const preuzimanje = document.getElementById("preuzimanje");
+const adresaBox = document.getElementById("adresaBox");
+const adresa = document.getElementById("adresa");
 
 preuzimanje.addEventListener("change", function() {
 
     if (this.value === "Dostava na kućnu adresu") {
 
-        adresaDiv.classList.remove("hidden");
-
-        document.getElementById("adresa").required = true;
+        adresaBox.style.display = "block";
+        adresa.required = true;
 
     } else {
 
-        adresaDiv.classList.add("hidden");
-
-        document.getElementById("adresa").required = false;
+        adresaBox.style.display = "none";
+        adresa.required = false;
+        adresa.value = "";
 
     }
 
 });
 
 
-// FORMA
+/* DATUM - NAJMANJE 1 DAN UNAPRED */
 
-orderForm.addEventListener("submit", function() {
-
-    successMessage.style.display = "block";
-
-});
-
-
-// MINIMALNI DATUM - SUTRA
-
-const dateInput = document.getElementById("datum");
+const datum = document.getElementById("datum");
 
 const tomorrow = new Date();
 
 tomorrow.setDate(tomorrow.getDate() + 1);
 
 const year = tomorrow.getFullYear();
+const month = String(tomorrow.getMonth() + 1).padStart(2, "0");
+const day = String(tomorrow.getDate()).padStart(2, "0");
 
-const month = String(
-    tomorrow.getMonth() + 1
-).padStart(2, "0");
+datum.min = `${year}-${month}-${day}`;
 
-const day = String(
-    tomorrow.getDate()
-).padStart(2, "0");
 
-dateInput.min = `${year}-${month}-${day}`;
+/* PORUKA NAKON SLANJA */
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function() {
+
+    setTimeout(function() {
+
+        alert(
+            "Zahtev je uspešno poslat! Kontaktiraćemo vas radi potvrde porudžbine."
+        );
+
+    }, 300);
+
+});
 
 </script>
 
